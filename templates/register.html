@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>博客登录</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+</head>
+<style>
+    .row{
+        background:url("../static/img/chuying-re1.jpg");
+        width:1600px;
+        height: 1000px;
+    }
+
+    .chuying{
+        background:url("../static/img/chuying-re.jpeg");
+        background-size: 500px,550px;
+        margin-top:50px;
+        font-weight: bold;
+        color: darkgoldenrod;
+    }
+    .error{
+        font-size: 14px;
+    }
+    .btn{
+        width:300px;
+        margin-left:30px;
+    }
+</style>
+<body>
+
+<div class="header">
+    <div class="row">
+      <div class=" chuying col-md-3 col-md-offset-4">
+          <h2>欢迎注册</h2>
+        <h3>
+          <form action="" method="post" novalidate>
+              {% csrf_token %}
+              {% for field in form %}
+                   <div>
+                      <lable for="">{{ field.label }}</lable>
+                        {{ field }}<span class="error" style="color:red;">{{ field.errors.0 }}</span>
+                         {% if field.label == "r_pwd" %}
+                             <span class="error pull-right">{{ g_error|default_if_none:"" }}</span>
+                         {% endif %}
+                  </div>
+              {% endfor %}
+                <div>
+                    <input name="" type="checkbox" value=""><span style="color:blue">已阅读并同意<a href="#" target="_blank"><span class="lan">《TCP使用协议》</span></a></span>
+                    <a href="/login/"><span style="color:blue;font-size: 16px">已有账号，直接登录>>></span></a>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" style="color:blueviolet">注册</button>
+                <button type="reset" class="btn btn-primary btn-lg btn-block " style="color:blueviolet">重置</button>
+          </form>
+        </h3>
+      </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+    .head{
+        margin:0 auto;
+        width:1000px;
+        height:40px;
+        background-color: #31b0d5;
+        text-align: center;
+        line-height: 40px;
+        text-decoration-color: #0f0f0f;
+        font-size: 30px;
+        position:relative;
+    }
+    .head a{
+        font-size: 25px;
+        text-decoration:none;
+        position:absolute;
+        margin-left: 280px;
+    }
+    .head .dl{
+    text-decoration:none;
+    position:absolute;
+    margin-left: 210px;
+}
+    .headfoot{
+        margin:0 auto;
+        width:1000px;
+        height:600px;
+        background: url("/static/img/login-chuying.jpg");
+        background-size:1000px 600px;
+        position:relative;
+    }
+    .box{
+        width:500px;
+        height:400px;
+        margin: auto;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        display: none;
+        background: url("/static/img/login-yasina.png"),rgba(50,60,180 ,0.6);
+        opacity: 0.9;
+        background-size:500px 400px;
+        /*{#background-color: rgba(50,60,180 ,0.6);#}*/
+        position:absolute;
+        color:#ffffff;
+        font-size: 22px;
+    }
+    .h1{
+        display: block;
+        width:300px;
+        height:30px;
+    }
+    .yanzheng{
+                width:300px;
+    }
+    .h2{
+        width:210px;
+        height:30px;
+    }
+    form img{
+        float:right;
+        width:80px;
+        height:35px;
+    }
+    .boxfoot{
+        width:300px;
+        height:100px;
+        margin:0 auto;
+        margin-top: 50px;
+    }
+    button{
+        width:85px;
+        height:35px;
+        margin-left:35px;
+        margin-top:10px;
+    }

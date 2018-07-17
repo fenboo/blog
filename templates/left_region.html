@@ -1,0 +1,42 @@
+<div>
+    <div class="list-group">
+        <div>
+            <a href="#" class="list-group-item active">
+                随笔分类
+            </a>
+        </div>
+        <div class="list-group-item">
+              {% for cate in cate_list %}
+                    <p><a href="/{{ username }}/category/{{ cate.0 }}">{{ cate.0 }}({{ cate.1 }})</a></p>
+              {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="list-group">
+        <div>
+            <a href="#" class="list-group-item active">
+                我的标签
+            </a>
+        </div>
+        <div class="list-group-item">
+            {% for tag in tag_list %}
+                <p><a href="/{{ username }}/tag/{{ tag.0 }}">{{ tag.0 }}({{ tag.1 }})</a></p>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="list-group">
+        <div>
+            <a href="#" class="list-group-item active">
+                日期归档
+            </a>
+        </div>
+        <div class="list-group-item">
+              {% for date in date_list %}
+                <p><a href="/{{ username }}/achrive/{{ date.0 }}">{{ date.0 }}({{ date.1 }})</a></p>
+              {% endfor %}
+        </div>
+    </div>
+</div>
